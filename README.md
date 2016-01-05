@@ -45,10 +45,13 @@
             （1）封装一个对象TouchScroll，参数为content, scroll
                 1）content：要操作的内容对象
                 2）scroll：要操作的滚轮对象
-            （2）在内容高度范围内，记录每一次的移动距离move_sub_dis
-            （2）判断上下滑动，改变this.currentPos
-            （3）transform滑动内容，同时按照相等比例滑动滚轮
+            （2）分别为两个操作对象绑定touch的三个事件
+            （3）在内容高度范围内，记录每一次的移动距离move_sub_dis
+            （4）判断上下滑动，改变this.currentPos
+            （5）transform滑动内容，同时按照相等比例滑动滚轮
+            （6）判断每一次的移动是否到达内容顶部或尾部
 
 ##4. form表单验证
     使用validationEngine插件验证
-    使用JSONP跨域。
+    使用JSONP跨域访问接口
+    
