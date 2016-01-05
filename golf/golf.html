@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高尔夫R-Line</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://tv.sohu.com/upload/swf/showVrsPlayer.js"></script>
+    <style>
+        .change_img, .news_bg_img, .settings_img, .sec2_bg_img, .vip_card img, .play_start img, .video_small_imgs, .video_opa_bg, .s_h_t1_img, .link_img, .bg_low_img{width: 100%;}
+        .secheader_infor{width: 44.1%; top: 1.7%; ;left:48.75%;}
+        .s_h_link{margin: 15px auto;}
+        .s_h_link{width: 42.2%;}
+
+        .wrap{margin-left: 1.6%; margin-right: 1.6%; top: 10.7%; color: #082037;}/* 620 */
+        .player_div{left: 0; top:0; width: 100%; bottom: 0;}/* bottom: 0 */
+        .sec1_videos{overflow: hidden;}
+        .small_video_wrap{margin-top: 1.94%; width: 300%; transform: translate3d(-11.34%, 0, 0);} /*12*/
+        .small_video_wrap li{width: 10.6%; margin-right: 0.74%;} /* 197 31.8% 2.2%*/
+        /*.small_video_wrap li:nth-last-child(1){margin-right: 0;}*/
+        .play_start{width: 38.1%; left: 31%; top: 22%;}
+
+        .sec2_book_try{margin-top: 3.7%;} /* 23px 620*/
+        .sec2_txt1{font-size: 1.7rem; font-weight: 500 ; margin-left: 39.5%;}
+        .form_wrap{margin-left: 5.32%; margin-right: 5.32%; margin-top: 3.2%; font-size: 1.2rem; font-weight: 500;}/*margin-top: 20px;*/
+        .form_div{margin-bottom: 2.3%; line-height: 25px;}/* 13px */
+        .fw_label{display: inline-block; width: 26.7%; }/*148 input404 form_wrap554*/
+        /*.fw_input{display: inline-block; width: 73.3%; box-sizing: border-box; height: 25px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border: 1px solid #A4A4A6;}/!*border: 2px/554 *!/*/
+        .fw_input{display: inline-block; width: 72%; padding: 0; height: 25px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border: 1px solid #A4A4A6;}/*border: 2px/554 72.7%*/
+
+        .gender{font-size: 1.3rem; font-style: italic; font-weight: 500 ; line-height: 25px;}
+        .gender input{width: 1.6%; opacity: 0;  cursor: pointer;  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";  filter: alpha(opacity=0);}/*9px*/
+        .text-muted{-webkit-user-select: none; width: 20%; } /* 107 29 19.3%*/
+        .circle-btn {float: left;  width: 17px;  height: 17px;  box-sizing: border-box;  border-radius: 100%;  border: 4px solid #fff; margin-top: 5.5px; }/*17*/
+        .radio_on{position:relative; border-color: #E60021;}
+        .radio_on span{ position: absolute; width: 5px;  height: 5px;  border-radius: 50%;  background-color: #E60021;  left: 2px;  top: 2px;  }
+        .gender_txt1{width: 36.3%; text-align: right; margin-right: 3.4%;}/* 72 221 201 */
+
+        .si_txt1{text-indent: -999px;}
+        .si_btn{border-color: #295D84; width: 23.1%; font-size: 1rem; color: #215792;
+            background: linear-gradient(to top, rgba(103,141,169,1), rgba(103,141,169,0))}/* 128 */
+
+        .sec2_txt2{color: rgb(108,110,111); width: 87%; font-size: 1rem; margin-top: 1.1%; margin-left: 13.18%;} /*482 19-13 73px*/
+        .intro_txt_card{margin-top: 3.6%; vertical-align: middle; }/*20*/
+        .sec2_txt3{width: 75%; color: rgb(8,32,55); font-size: 1rem;}/*415*/
+        .vip_card{width: 24.2%;}/*134*/
+        .sec2_txt4{color: rgb(20,20,20); font-size: 1rem; margin-top: 2.3%;} /*13*/
+
+        /*.submit_btn{margin-top: 4.7%; width: 27.6%; height: 35px; background-color: #C12E2A; -webkit-transform: skew(-21.4deg); -moz-transform: skew(-21.4deg); -o-transform: skew(-21.4deg);}/!*153-18 51 margin-top26 -21.4 #004574 #C12E2A*!/*/
+        /*.btn_blue{left: 0; top: 0; width: 88.2%; height: 35px; background-color: #004574;}*/
+        /*.submit_btn span{left: 19%; top: 20%; font-size: 1.2rem; color: #D1EFFC; -webkit-transform: skew(21.4deg); -moz-transform: skew(21.4deg); -o-transform: skew(21.4deg);}/!*D1EFFC 10 11*!/*/
+        .submit_btn{margin-top: 9.57%; width: 115.5%; margin-left: -7.76%;} /*53 115.5% (640-554)/2/554*/
+        .submit_btn_img{width: 23.9%; left: 38.4%; top: -50%;} /*246 -27*/
+
+        .sec3_settings{margin-top: 4.2%;}/*26*/
+        .setting_wrap{margin-top: 2.9%; height: 300px; width: 100%; overflow: hidden;}/*18  345*/
+        .scroll_bg{width: 15px; height: 300px; right:0; top: 0; background-color: #333333;} /*15*/
+        .up_tri{top: 6px; right: 4px;
+            width: 0;
+            height: 0;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-bottom: 4px solid #E9E9E9;}/*width: 6px; height:4px;  top6 left5 right4*/
+        .down_tri{bottom: 7px; right: 4px;
+            width: 0;
+            height: 0;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-top: 4px solid #E9E9E9;} /* bottom7*/
+        .scroll{width:12px; height:131px; right: 1px; top: 19px; border-radius: 2px; background-color: #7E7E7E;}/*12 131 */
+
+        .sec4_news{margin-top: 5.5%;}/*34 19*/
+        .news_wrap{margin-top: 3.1%; width: 103.2%; margin-left: -1.6%;}
+        .news_lists{top: 8%; right: 3.4%; width: 62%; color: #F0F0F0; font-size: 0.8rem; font-weight: normal; } /* 12.2% 32 22 ul386 60.3% 193 left233*/
+        .news_title{border-bottom: 1px dashed #576166; padding: 2% 1%; white-space:nowrap; overflow-x: hidden} /* padding-left4  7 padding-top10 2.6% F0F0F0  #C42521*/
+        .news_title a{color: #F0F0F0; font-size: 0.8rem;}
+        .news_title span{display:inline-block; box-sizing: border-box; width: 8px; height: 8px; border-radius: 100%; -webkit-border-radius:100%; -moz-border-radius:100%; border: 2px solid #F0F0F0; margin-right: 1.8%;}/*9*/
+
+        .sec5_cars{margin-top: 5.5%;}/*34 19*/
+        .cars_wrap{margin-top: 3.1%; overflow: hidden;}
+
+        .img_translate{width: 800%; transform:translate3D(-12.5%,0,0)}
+        .trans_li{width: 12.5%;}
+        .change_points{bottom: 5%; left: 45.6%; width: 30%; } /*left283 bottom20 82 13.2%   width15%*/
+        .chg_pot{width: 14px; height: 14px; border-radius: 100%; background-color: #ffffff; margin-right: 5.48%;} /*14 14 9 width10.97%*/
+        .cp_last{margin-right: 0;}
+        .chg_pot_on{background-color: #C12E2A; }
+        /*.change_points li:nth-last-child(1){margin-right: 0;}*/
+
+        /*40*/
+    </style>
+
+    <!--  -->
+    <link rel="stylesheet" href="./validationEngine/css/validationEngine.jquery.css" type="text/css">
+    <link rel="stylesheet" href="./validationEngine/css/template.css" type="text/css">
+    <script src="./validationEngine/js/jquery-1.8.2.min.js" type="text/javascript">
+    </script>
+    <script src="./validationEngine/js/languages/jquery.validationEngine-zh_CN.js" type="text/javascript" charset="utf-8">
+    </script>
+    <script src="./validationEngine/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
+    </script>
+    <script>
+      jQuery(document).ready(function(){
+          // binds form submission and fields to the validation engine
+        jQuery("#formID1").validationEngine('attach', {promptPosition : "centerRight", autoPositionUpdate : true});
+        jQuery("#formID2").validationEngine('attach', {promptPosition : "bottomLeft", autoPositionUpdate : true});
+        jQuery("#formID3").validationEngine('attach', {promptPosition : "bottomRight", autoPositionUpdate : true});
+        jQuery("#formID4").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+      });
+    </script>
+    <!--  -->
+</head>
+<body>
+    <div class="bg_low rel">
+        <img class="bg_low_img" src="images/bg_icon.jpg">
+        <div class="secheader_infor abs">
+            <div class="s_h_txt"><img class="s_h_t1_img" src="images/header_txt1_icon.png"></div>
+            <div class="s_h_link"><a href="#" class=""><img class="link_img" src="images/link_bgtxt.jpg"></a></div>
+        </div>
+        <div class="wrap abs">
+            <div class="sec1_videos">
+                <div class="video_b rel">
+                    <img class="video_opa_bg" src="images/video_bg.png">
+                    <div id="sohuplayer" class="player_div abs"></div>
+                    <!--<img class="video_img abs" src="images/video_img.jpg">-->
+                    <script>
+                        document.getElementById('sohuplayer').innerHTML = showVrsPlayer({
+                            lid: '10110',
+                            ltype:'2',
+                            width: '100%',
+                            height: '100%',
+                            autoplay:false,
+                            getHTML:1
+                        });
+                    </script>
+                </div>
+                <ul id="small_video_wrap" class="small_video_wrap cf">
+                    <li class="l rel"><img class="video_small_imgs" src="images/video_img.jpg"><div class="play_start abs"><img src="images/play_btn.png"></div></li>
+                    <li class="l rel"><img class="video_small_imgs" src="images/car_jkc.jpg"><div class="play_start abs"><img src="images/play_btn.png"></div></li>
+                    <li class="l rel"><img class="video_small_imgs" src="images/car_sangtana.jpg"><div class="play_start abs"><img src="images/play_btn.png"></div></li>
+                    <li class="l rel"><img class="video_small_imgs" src="images/car_jiakechong.jpg"><div class="play_start abs"><img src="images/play_btn.png"></div></li>
+                </ul>
+            </div>
+
+            <div class="sec2_book_try">
+                <h3 class="sec2_txt1">预约试驾</h3>
+                <div class="form_wrap">
+                    <form id="formID4" action="">
+                        <div class="form_div cf">
+                            <label for="real_name" class="fw_label l">真实姓名</label>
+                            <input type="text" id="real_name" class="fw_input l validate[required] text-input" msg="真实姓名"/>
+                        </div>
+                        <div class="form_div gender cf">
+                            <label class="gender_txt1 l">称谓</label>
+                            <label for="" class="text-muted l">
+                                <div class="circle-btn radio_on"><span></span></div>
+                                <input type="radio" name="radio_gender" class="l" value="female" checked="checked"/>女士
+                            </label>
+                            <label for="" class="text-muted l">
+                                <span class="circle-btn"><span></span></span>
+                                <input type="radio" name="radio_gender" class="l" value="male"/>先生
+                            </label>
+                        </div>
+                        <div class="form_div cf">
+                            <label for="telphone_num" class="fw_label l">手机号码</label>
+                            <input type="text" id="telphone_num" class="fw_input l validate[required,custom[phone]] text-input" msg="手机号码"/>
+                        </div>
+                        <div class="form_div cf">
+                            <label class="fw_label l si_txt1">1</label>
+                            <input type="button" id="send_identify" value="发送验证码" class="si_btn fw_input l"/>
+                        </div>
+                        <div class="form_div cf">
+                            <label for="idf_num" class="fw_label l">验证码</label>
+                            <input type="text" id="idf_num" class="fw_input l validate[required] text-input" msg="验证码"/>
+                        </div>
+                        <div class="form_div cf">
+                            <label class="fw_label l">省份</label>
+                            <select name="province" id="province" class="fw_input l validate[required] text-input"></select>
+                        </div>
+                        <div class="form_div cf">
+                            <label class="fw_label l">城市</label>
+                            <select name="city" id="city" class="fw_input l validate[required] text-input"></select>
+                        </div>
+                        <div class="form_div cf">
+                            <label class="fw_label l">试驾车型</label>
+                            <select name="car_type" id="car_type" class="fw_input l validate[required] text-input"></select>
+                        </div>
+                        <div class="form_div cf">
+                            <label class="fw_label l">指定经销商</label>
+                            <select name="province" id="cho_dealer" class="fw_input l validate[required] text-input"></select>
+                        </div>
+                    </form>
+                    <p class="sec2_txt2">(* 您的个人资料有可能会提交至一汽大众厂商的授权经销商与您进一步沟通试驾购车等事宜。) </p>
+                    <div class="intro_txt_card cf">
+                        <p class="sec2_txt3 l">在线提交预约试驾信息，便可获得搜狐视频28天会员卡一张，限量1000张，先到先得。 </p>
+                        <a href="#" class="vip_card r"><img src="images/sh_vip_card_icon.jpg"></a>
+                    </div>
+                    <p class="sec2_txt4">*本活动最终解释权归活动主办方所有</p>
+                    <!--<div class="submit_btn cf">-->
+                        <!--<div class="btn_blue abs"></div>-->
+                        <!--<span class="abs">提交信息</span>-->
+                    <!--</div>-->
+                    <div class="submit_btn rel">
+                        <img class="sec2_bg_img" src="images/btn_low_bg.jpg">
+                        <img class="submit_btn_img abs" src="images/submit_btn_icon.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="sec3_settings">
+                <h3 class="sec2_txt1">车型配置</h3>
+                <div class="setting_wrap rel">
+                    <img id="settings_img" class="settings_img" src="images/all_setting.jpg">
+                    <!--<div class="scroll_mod rel">-->
+                    <span class="scroll_bg disib abs"></span>
+                    <span class="up_tri disib abs"></span>
+                    <span class="down_tri disib abs"></span>
+                    <span id="scroll" class="scroll disib abs"></span>
+                    <!--</div>-->
+                </div>
+            </div>
+
+            <div class="sec4_news">
+                <h3 class="sec2_txt1">新闻资讯</h3>
+                <div class="news_wrap rel">
+                    <img class="news_bg_img" src="images/news_infor.jpg">
+                    <ul class="news_lists abs">
+                       <li class="news_title"><a href="#"><span></span>创领运动风尚潮流 大众高尔夫R-Line正式上市</a></li>
+                       <li class="news_title"><a href="#"><span></span>创领运动风尚潮流 大众高尔夫R-Line</a></li>
+                       <li class="news_title"><a href="#"><span></span>创领运动风尚潮流 大众高尔夫</a></li>
+                       <li class="news_title"><a href="#"><span></span>创领运动风尚潮流 大众高尔夫R-Line</a></li>
+                       <li class="news_title"><a href="#"><span></span>创领运动风尚潮流 大众高尔夫R-Line</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sec5_cars">
+                <h3 class="sec2_txt1">精美车图</h3>
+                <div class="cars_wrap rel">
+                    <ul id="img_translate" class="img_translate cf">
+                        <li class="trans_li l"><img class="change_img" src="images/nice_car_icon.jpg"></li>
+                        <li class="trans_li l"><img class="change_img" src="images/car_jkc.jpg"></li>
+                        <li class="trans_li l"><img class="change_img" src="images/car_sangtana.jpg"></li>
+                        <li class="trans_li l"><img class="change_img" src="images/car_jiakechong.jpg"></li>
+                    </ul>
+                    <ul id="change_points" class="change_points abs cf">
+                        <li class="chg_pot chg_pot_on l"></li>
+                        <li class="chg_pot l"></li>
+                        <li class="chg_pot l"></li>
+                        <li class="chg_pot l"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/touch_tran_old.js"></script>
+    <script src="js/img_translate.js"></script>
+    <script type="text/javascript" src="validationEngine/js/jquery.validationEngine.js"></script>
+
+</body>
+</html>

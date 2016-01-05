@@ -1,0 +1,58 @@
+body{background:#fff;color:#999;font:12px/1.5 microsoft yahei,hiragino sans gb,simsun;}
+body,form,ul,ol,li,p,dl,dt,dd,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6,input,textarea{font-size:12px;font-weight: normal;}
+li{list-style:none;}
+img{border:0;vertical-align: top;}
+em{font-style:normal;}
+textarea{resize:none;}
+a{outline:none;}
+
+/*clear float*/
+.clear:after,.cfix:after,.cf:after{content:".";display:block;visibility:hidden;height:0;clear:both;}
+
+/*common*/
+/*左浮动和右浮动class值*/
+.l{float:left;}
+.r{float:right;}
+/*隐藏元素时候的class值*/
+.hid{display:none;}
+/*设置定位*/
+.rel{position: relative;}
+.abs{position: absolute;}
+/*设置手型*/
+.pointer{cursor: pointer;}
+/*设置块级元素水平居中*/
+.area{width:1000px;margin:0 auto;}
+/*设置元素的最小宽*/
+
+/*设置元素为块级元素,行内元素，行内块级元素*/
+.disb{display:block;}
+.disi{display:inline;}
+.disib{display:inline-block;}
+/*设置省略号*/
+.elli{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+
+/*a*/
+a{text-decoration: none;color:#3a3a3a;}
+a:hover{text-decoration: underline;color:#e73c31;}
+
+html { font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 62.5%; }
+body { margin: 0; font-size: 1.4rem; line-height: 1.5; color: #333333; background-color: white; height: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+html {
+    font-size: 62.5%;
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%!important;
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%!important;
+    }
+}
