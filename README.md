@@ -50,6 +50,7 @@
             （4）判断上下滑动，改变this.currentPos
             （5）transform滑动内容，同时按照相等比例滑动滚轮
             （6）判断每一次的移动是否到达内容顶部或尾部
+    使用方法：var imgs = new TouchScroll(document.getElementById('settings_img'), document.getElementById("scroll"));
 
 ##4. form表单验证
     使用validationEngine插件验证
